@@ -51,14 +51,58 @@ var employees = [
 */
 
 //Code Here
+// function employeeUpdater(){
+//     for(let prop in employees) {
+//         if((employees[prop]) === "Theo"){
+//            delete employees[prop];
+//         }
+//     }
+//   return employees
+// }
+
+function employeeUpdater (){
+  for (let i = 0; i < employees.length; i++) {
+    if (employees[i].firstName === 'Theo') {
+      employees.splice([i], 1);
+    } else if (employees[i].firstName === 'Lorie') {
+      employees[i].department = 'HR';
+    }
+  } return employees;
+} 
+
+
+// console.log(employeeUpdater());
+
+// function employeeUpdater(){
+//   var fired = employees.filter(function(elem, i, arr){
+//       return elem["firstName"] !== "Theo"
+//   })
+//    var lorie = employees.map(function(elem, i, arr)){
+//     if (i === "Lorie")}
+//      employees arr[i] = 
+//    }
+// }
+
+
+
+
+
+
+
+// function employeeUpdater(){
+//   if(employees.includes(“Theo”)){
+//   delete obj
+//    }
+//      return employees
+// }
+
+
+ 
 
 
 
 ////////// PROBLEM 2 //////////
 
-// Do not edit the code below.
-var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
-// Do not edit the code above.
 
 /*
   The array above represents IDs tied to reported workplace accidents. 
@@ -67,10 +111,22 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
     3. Return the updated array.
 */
+// Do not edit the code below.
+var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
+// Do not edit the code above.
 
 //Code Here
-
-
+function removeDuplicates(arr){
+  for (let i = 0; i<arr.length; i++){;
+    for(let j = i+1; j<arr.length; j++){;
+      if(arr[i] === arr[j]){
+        arr.splice(i, 1)
+        i--;
+      }
+    }
+  }
+  return arr
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -97,8 +153,10 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+
+
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
