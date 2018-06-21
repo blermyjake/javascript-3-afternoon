@@ -26,10 +26,9 @@ let evenNumbers = mixedNumbers.filter(function(element, index, wholeArray){
 }
 )
 
-// mixedNumbers.filter(element){
-//   return element %2===0
-// }
-// )
+
+
+// mixedNumbers.filter((function(element)=> {return element %2===0})
 
 
 
